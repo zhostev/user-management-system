@@ -78,7 +78,15 @@ MONGODB_URI=mongodb://localhost:27017/user-management
 JWT_SECRET=your-secure-jwt-secret-key
 JWT_EXPIRES_IN=24h
 ```
-
+# 创建管理员账户
+```bash
+# 注册管理员账户
+curl -X POST http://localhost:5000/api/register-admin \
+  -H "Content-Type: application/json" \
+  -d '{"username":"admin","email":"admin@example.com","password":"admin123","secretKey":"admin-secret-key"}'
+  
+npm run register-admin -- --username=admin --password=admin123 --email=admin@example.com
+```
 ## 运行应用
 
 ### 开发模式
