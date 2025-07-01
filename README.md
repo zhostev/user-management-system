@@ -88,6 +88,9 @@ JWT_EXPIRES_IN=24h
 npm run dev:backend
 
 # 打开新终端，启动前端开发服务器
+UNSET host && npm start
+
+# 启动前端开发服务器
 npm run dev:frontend
 ```
 
